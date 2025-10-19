@@ -151,7 +151,7 @@ ax1.grid(True, alpha=0.5)
 colors = plt.cm.get_cmap('viridis', k_ideal)
 legend_elements = []
 
-# 6.1 Plotar todos os pontos (Entregas)
+
 ax2.scatter(df['longitude'], df['latitude'], 
                       c=df['cluster'], 
                       cmap=colors, 
