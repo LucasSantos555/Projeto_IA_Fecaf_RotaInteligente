@@ -89,7 +89,6 @@ kmeans = KMeans(n_clusters=k, random_state=42, n_init=10)
 df['cluster'] = kmeans.fit_predict(X) 
 print(f"\n[PASSO 1] Agrupamento K-Means concluído com K={k}.")
 
-# ---Inicio Sequenciamento TSP por Cluster (Vizinho Mais Próximo) ---
 
 optimized_routes = {}
 total_distance_nn_tsp = 0.0
@@ -131,7 +130,7 @@ for cluster_id in sorted(df['cluster'].unique()):
 
 print(f"\nDistância Total Combinada das Rotas: {total_distance_nn_tsp:.2f} km")
 
-# --- 6. PLOTAGEM FINAL: Unificando Cotovelo e Rotas em 2 Subplots ---
+
 
 # Cria uma figura única com dois subplots (1 linha, 2 colunas)
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(18, 8)) 
